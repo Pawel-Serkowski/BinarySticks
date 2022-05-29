@@ -1,0 +1,154 @@
+/*fonts*/ 
+/*@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /*font-family: 'VT323', monospace;
+    font-family: 'Nova Mono', monospace;
+    font-family: 'Azeret Mono', monospace;*/
+    font-family: 'IBM Plex Mono', monospace;
+
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+}
+
+header{
+    background-color: #2ecc71;
+    color:darkslategrey;
+    width:100%;
+    height:80px;
+    border-bottom:solid 10px #27ae60;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+header .text{
+    font-size:48px;
+    color: #2c3e50;
+}
+header .text:hover{
+    cursor:pointer;
+}
+section{
+    background-color:#34495e;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+#sticks{
+    width:600px;
+    height:600px;
+    display:flex;
+    justify-content:space-between;
+}
+#number_input{
+    height:120px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+#number_input input{
+    background:none;
+    font-size:48px;
+    text-align: center;
+    border: none;
+    border-bottom: #1ABC9C 5px solid;
+    width:200px;
+    overflow: hidden;
+    transition: ease 0.2s;
+    color: #ECF0F1;
+
+}
+#number_input button{
+    margin-top:10px;
+    width:200px;
+    height:40px;
+    font-size:28px;
+    border:none;
+    background: rgb(34,193,195);
+    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(45,253,86,1) 100%);
+    transition: ease 0.2s;
+    border-radius:4px;
+    color:#2c3e50;
+}
+#number_input button:hover{
+    background: radial-gradient(circle, rgba(45,253,86,1) 0%, rgba(34,193,195,1) 100%);
+    cursor:pointer
+}
+
+#number_input input:focus,
+#number_input input:hover{
+    outline:none;
+    cursor: pointer;
+    width:250px;
+}
+.stick{
+    height: 600px;
+    width:50px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.head{
+    width:40px;
+    height:40px;
+    background-color:#bdc3c7;
+    border-radius:50%;
+}
+.leg{
+    width:5px;
+    height:300px;
+    background-color:#bdc3c7;
+    border-radius:2px;
+}
+.number{
+    font-size:100px;
+    color: #ecf0f1;
+}
+.green{
+    background-color:#2ecc71;
+}
+
+@media screen and (max-width:600px){
+    header .text{
+        font-size:28px;
+    }
+    section #sticks{
+        flex-direction: column;
+        align-items: center;
+        justify-content:flex-start;
+    }
+    section .stick{
+        flex-direction: row;
+        justify-content: center;
+        width: 100px;
+        margin-bottom: 0px;
+        margin-top:0px;
+        height:40px;
+    }
+    section .stick .leg{
+        display:none;
+    }
+    section .stick .head{
+            width:20px;
+            height:20px;
+    }
+    section .stick .number{
+        font-size:20px;
+        margin-right: 10px;
+    }
+
+}
